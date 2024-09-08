@@ -9,18 +9,20 @@ import {
 import Link from "next/link";
 
 export default function MhsItem({ mhs }: { mhs: any }) {
+  const parts = mhs.text
+    .split(",")
+    .map((part: string) => part.replace(/\s+/g, " ").trim());
+
+  const nameAndNim = parts[0] || "No Name/NIM available";
+  const institution = parts[1] || "Maaf, Data Tidak Ditemukan☹️";
+  const program = parts[2] || "Mohon Cari Data Lainnya";
+
   return (
     <Card className="mx-2">
       <CardHeader>
-        <CardTitle>
-          {mhs.text.split(",")[0].replace(/\s+/g, " ").trim()}
-        </CardTitle>
-        <CardDescription>
-          {mhs.text.split(",")[1].replace(/\s+/g, " ").trim()}
-        </CardDescription>
-        <CardDescription>
-          {mhs.text.split(",")[2].replace(/\s+/g, " ").trim()}
-        </CardDescription>
+        <CardTitle>{nameAndNim}</CardTitle>
+        <CardDescription>{institution}</CardDescription>
+        <CardDescription>{program}</CardDescription>
       </CardHeader>
     </Card>
   );
