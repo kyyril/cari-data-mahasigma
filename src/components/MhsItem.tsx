@@ -1,12 +1,9 @@
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "next/link";
 
 export default function MhsItem({ mhs }: { mhs: any }) {
   const parts = mhs.text

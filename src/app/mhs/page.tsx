@@ -3,7 +3,7 @@ import { InputWithButton } from "@/components/SearchInput";
 import { baseUrl } from "@/consta";
 
 async function fetchMhs(query: string) {
-  let url = new URL(`${baseUrl}/hit_mhs/${query}`);
+  const url = new URL(`${baseUrl}/hit_mhs/${query}`);
   url.searchParams.set("maxResults", "10");
 
   try {
