@@ -1,4 +1,5 @@
-import { baseUrl } from "@/consta";
+import DetailMahasiswa from "@/components/DetailMhs";
+import { baseUrl } from "@/lib/fetching";
 
 async function fetchDetail(slug: string) {
   try {
@@ -25,12 +26,9 @@ export default async function detailMhs({
   if (!detailMhs) {
     return <p>Error loading details. Please try again later.</p>;
   }
-
   return (
     <div>
-      <h1>Detail Mahasiswa</h1>
-      <pre>{JSON.stringify(detailMhs, null, 2)}</pre>
-      {/* Here you can render the detailed data as needed */}
+      <DetailMahasiswa detailMhs={detailMhs} />
     </div>
   );
 }

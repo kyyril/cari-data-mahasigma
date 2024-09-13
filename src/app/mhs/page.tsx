@@ -1,6 +1,6 @@
 import MhsList from "@/components/MhsList";
 import { InputWithButton } from "@/components/SearchInput";
-import { baseUrl } from "@/consta";
+import { baseUrl } from "@/lib/fetching";
 
 async function fetchMhs(query: string) {
   const url = new URL(
