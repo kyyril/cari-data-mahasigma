@@ -41,7 +41,7 @@ const DetailMahasiswa: React.FC<DetailMahasiswaProps> = ({ detailMhs }) => {
   const { datastatuskuliah, datastudi, dataumum } = detailMhs;
 
   return (
-    <div className="flex flex-col gap-6 p-6">
+    <section className="gap-6 p-6 w-full max-w-3xl flex justify-center items-center flex-col">
       <div className="mb-6">
         <h2 className="text-2xl font-bold  mb-4">Data Umum</h2>
         <p className="">
@@ -99,8 +99,8 @@ const DetailMahasiswa: React.FC<DetailMahasiswaProps> = ({ detailMhs }) => {
         <table className="min-w-full border border-gray-300">
           <thead>
             <tr className="border-b">
-              <th className="py-2 px-4">Kode Mata Kuliah</th>
-              <th className="py-2 px-4">Nama Mata Kuliah</th>
+              <th className="py-2 px-4">No</th>
+              <th className="py-2 px-4">Nama Matkul</th>
               <th className="py-2 px-4">SKS</th>
               <th className="py-2 px-4">Semester</th>
             </tr>
@@ -108,7 +108,7 @@ const DetailMahasiswa: React.FC<DetailMahasiswaProps> = ({ detailMhs }) => {
           <tbody>
             {datastudi.map((studi, index) => (
               <tr key={index} className=" border-b">
-                <td className="py-2 px-4">{studi.kode_mk}</td>
+                <td className="py-2 px-4">{index + 1}</td>
                 <td className="py-2 px-4">{studi.nm_mk}</td>
                 <td className="py-2 px-4">{studi.sks_mk}</td>
                 <td className="py-2 px-4">{studi.id_smt}</td>
@@ -117,7 +117,7 @@ const DetailMahasiswa: React.FC<DetailMahasiswaProps> = ({ detailMhs }) => {
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         Dibangun oleh{" "}
         <a
           href="https://github.com/kyyril"
-          className="hover:text-blue-700 underline"
+          className="text-blue-800 hover:text-secondary underline"
         >
           Kyyril
         </a>

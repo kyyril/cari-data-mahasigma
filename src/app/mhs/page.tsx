@@ -32,9 +32,9 @@ export default async function Mhss({
     <main className="w-full flex justify-center items-start min-h-screen mt-16">
       <section className="w-full max-w-3xl flex justify-center items-center flex-col">
         <p>*belum selesai cik, checkpoint dlu..</p>
-        <h3 className="m-2 text-center font-sans">
+        <p className="m-2 text-center font-sans font-semibold">
           Mencari data Mahasigma dari berbagai perguruan tinggi di Indonesia.
-        </h3>
+        </p>
         <InputWithButton />
         <MhsList dataMhs={dataMhs} />
       </section>

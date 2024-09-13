@@ -6,7 +6,7 @@ const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 150) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -28,12 +28,12 @@ const BackToTopButton = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5">
+    <div className="fixed bottom-10 right-5">
       {isVisible && (
         <Button
           onClick={scrollToTop}
           variant="outline"
-          className="rounded-full p-2 shadow-lg "
+          className="backdrop-blur-md rounded-full py-6 px-3 shadow-lg size-lg"
         >
           👆🏻
         </Button>
