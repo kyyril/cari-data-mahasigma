@@ -27,7 +27,7 @@ export default async function detailMhs({
     return <p>Error loading details. Please try again later.</p>;
   }
   return (
-    <div>
+    <div className="w-full flex flex-col min-h-screen mt-16">
       <DetailMahasiswa detailMhs={detailMhs} />
     </div>
   );

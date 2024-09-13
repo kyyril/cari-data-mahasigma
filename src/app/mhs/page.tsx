@@ -29,14 +29,12 @@ export default async function Mhss({
 }) {
   const dataMhs = await fetchMhs(searchParams.query);
   return (
-    <main className="w-full flex justify-center items-start min-h-screen">
+    <main className="w-full flex justify-center items-start min-h-screen mt-16">
       <section className="w-full max-w-3xl flex justify-center items-center flex-col">
-        <h1 className="text-4xl text-center font-extrabold">
-          Cari Data Mahasigma
-        </h1>
-        <p className="m-2 text-center font-sans">
-          Mencari data Mahasiswa dari berbagai perguruan tinggi di Indonesia.
-        </p>
+        <p>*belum selesai cik, checkpoint dlu..</p>
+        <h3 className="m-2 text-center font-sans">
+          Mencari data Mahasigma dari berbagai perguruan tinggi di Indonesia.
+        </h3>
         <InputWithButton />
         <MhsList dataMhs={dataMhs} />
       </section>

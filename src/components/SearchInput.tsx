@@ -7,12 +7,12 @@ export function InputWithButton() {
   const [search, setSearch] = useState<string>("");
   const router = useRouter();
   return (
-    <div className="flex w-full max-w-sm items-center space-x-2">
+    <div className="flex w-11/12 max-w-sm items-center space-x-2">
       <Input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         type="text"
-        placeholder="cari berdasarkan nama,nim.."
+        placeholder="keyword: [nama],[nim],[prodi].."
       />
       <Button onClick={() => router.push(`/mhs?query=${search}`)} type="submit">
         Cari

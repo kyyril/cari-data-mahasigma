@@ -55,23 +55,14 @@ const DetailMahasiswa: React.FC<DetailMahasiswaProps> = ({ detailMhs }) => {
         </p>
         <p className="">
           <span className="font-semibold">Universitas:</span>
-          <a href={dataumum.link_pt} className="text-blue-500 hover:underline">
-            {" "}
-            {dataumum.namapt}
-          </a>
+          <a className="text-blue-500 hover:underline"> {dataumum.namapt}</a>
         </p>
         <p className="">
           <span className="font-semibold">Jenjang:</span> {dataumum.namajenjang}
         </p>
         <p className="">
           <span className="font-semibold">Program Studi:</span>
-          <a
-            href={dataumum.link_prodi}
-            className="text-blue-500 hover:underline"
-          >
-            {" "}
-            {dataumum.namaprodi}
-          </a>
+          <a className="text-blue-500 hover:underline"> {dataumum.namaprodi}</a>
         </p>
         <p className="">
           <span className="font-semibold">Mulai Semester:</span>{" "}
