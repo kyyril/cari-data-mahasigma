@@ -4,7 +4,7 @@ export default function MhsList({ dataMhs }: { dataMhs: any }) {
     <div className="w-full flex flex-col gap-2 mt-4">
       {dataMhs?.mahasiswa?.length ? (
         dataMhs.mahasiswa.map((mhs: any) => (
-          <div key={mhs.text}>
+          <div key={mhs.id}>
             <MhsItem mhs={mhs} />
           </div>
         ))
