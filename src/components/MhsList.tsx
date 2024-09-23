@@ -1,5 +1,4 @@
 import MhsItem from "./MhsItem";
-import Loading from "@/app/mhs/loading";
 export default function MhsList({ dataMhs }: { dataMhs: any }) {
   return (
     <div className="w-full flex flex-col gap-2 mt-4">

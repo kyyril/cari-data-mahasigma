@@ -1,6 +1,8 @@
+import LoadingListMhs from "@/components/Loading";
 import MhsList from "@/components/MhsList";
 import { InputWithButton } from "@/components/SearchInput";
 import { baseUrl } from "@/lib/fetching";
+import { Suspense } from "react";
 
 async function fetchMhs(query: string) {
   const url = new URL(
@@ -31,12 +33,13 @@ export default async function Mhss({
   return (
     <main className="w-full flex justify-center items-start min-h-screen mt-16">
       <section className="w-full max-w-3xl flex justify-center items-center flex-col">
-        <p>*belum selesai cik, checkpoint dlu..</p>
         <p className="m-2 text-center font-sans font-semibold">
           Mencari data Mahasigma dari berbagai perguruan tinggi di Indonesia.
         </p>
         <InputWithButton />
-        <MhsList dataMhs={dataMhs} />
+        <Suspense fallback={<LoadingListMhs />}>
+          <MhsList dataMhs={dataMhs} />
+        </Suspense>
       </section>
     </main>
   );
